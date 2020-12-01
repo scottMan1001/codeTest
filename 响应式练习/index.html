@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 1900px;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="height: 500px;width: 100px;border: 1px solid red;"></div>
+    <script>
+        // var mk = 1
+        // function debounce(fn, delay) {
+
+        //     // 维护一个 timer，用来记录当前执行函数状态
+        //     let timer = null;
+
+        //     return function () {
+
+
+        //         // 通过 ‘this’ 和 ‘arguments’ 获取函数的作用域和变量
+        //         let context = this;
+        //         let args = arguments;
+        //         // 清理掉正在执行的函数，并重新执行
+        //         clearTimeout(timer);
+        //         timer = setTimeout(function () {
+        //             // fn.apply(context, args);
+        //             fn()
+        //         }, delay);
+        //     }
+        // }
+        let flag = 0; // 记录当前函数调用次数
+        // // 当用户滚动时被调用的函数
+        function foo() {
+            flag++;
+            console.log('Number of calls: %d', flag);
+        }
+
+        function throttle(func, delay) {
+            let prev = Date.now();
+            return function () {
+                const context = this;
+                const args = arguments;
+                const now = Date.now();
+                if (now - prev >= delay) {
+                    func.apply(context, args);
+                    prev = Date.now();
+                }
+            }
+        }
+        // window.onscroll = debounce(foo, 2000)
+       window.addEventListener('scroll', throttle(foo, 2000));
+    </script>
+</body>
+
+</html>
