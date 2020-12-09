@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+        #a{
+            float: left;
+            width: 100px;
+            height: 100px;
+            margin-left: 15px;
+            background-color: red;
+        }
+        #b{
+            width: 100px;
+            float: left;
+            height: 100px;
+            margin-left: 15px;
+            background-color: black;
+        }
+        #c{
+            float: right;
+            width: 100px;
+            height: 100px;
+            /* margin-left: 15px; */
+            background-color: purple;
+            width: 110px;
+        }
+        /* .clear::after{
+            content: "020";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+        .clear{
+            zoom:1
+        } */
+        .clear{
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div style="background-color: #ccc;border: 1px solid black;">
+        <div id="a"></div>
+    
+    <!-- <div id="b" class="clear"></div> -->
+    <div class="clear"></div>
+    <div id="c"></div>
+    </div>
+    
+</body>
+</html>
