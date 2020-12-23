@@ -25,8 +25,14 @@ function fibonacci(n) {
 }
 
 //for 循环版本
-function fibonacci(n) {
-    var n1 = 1, n2 = 1, sum;
+function Fibonacci(n) {
+    // write code here
+    // 0 1 1 2 3 5 8 13 21
+    var n1 = 1,
+        n2 = 1,
+        sum = 0;
+    if (n == 0) return 0
+    if (n == 1 || n == 2) return 1
     for (let i = 2; i < n; i++) {
         sum = n1 + n2
         n1 = n2

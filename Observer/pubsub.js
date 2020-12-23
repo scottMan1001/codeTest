@@ -60,10 +60,11 @@ class PubSub {
   }
   
   let pubsub = new PubSub();
-  pubsub.on('completed', (...args) => {
-    console.log(args.join(' '));
-  }).on('completed', callback);
-  
-  pubsub.emit('completed', 'what', 'a', 'fucking day');
+  // pubsub.on('completed', (...args) => {
+  //   console.log(args.join(' '));
+  // }).on('completed', callback);
+pubsub.on('finish',()=>console.log('you are cool'))
+pubsub.emit('finish')
+  // pubsub.emit('completed', 'what', 'a', 'fucking day');
 //   pubsub.off('completed', callback);
 //   pubsub.emit('completed', 'fucking', 'again');

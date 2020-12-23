@@ -9,7 +9,7 @@ aryMethods.forEach((method)=> {
    // 将push, pop等封装好的方法定义在对象arrayAugmentations的属性上
    // 注意：是属性而非原型属性
     arrayAugmentations[method] = function () {
-        debugger
+      
         console.log('我被改变啦!');
 
         // 调用对应的原生方法并返回结果
@@ -24,6 +24,7 @@ let list = ['a', 'b', 'c'];
 // 别忘了这个空数组的属性上定义了我们封装好的push等方法
 list.__proto__ = arrayAugmentations;
 list.push('d');  // 我被改变啦！ 4
+console.log(list)
 
 // 这里的list2没有被重新定义原型指针，所以就正常输出
 let list2 = ['a', 'b', 'c'];
