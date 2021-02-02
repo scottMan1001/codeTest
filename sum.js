@@ -7,4 +7,4 @@ function add (...args){
 }
 // add.toString=()=>0
 const add3  = add(0, 1)(2) // add3的功能是对传入的数值加3并返回
-console.log(  +add(0, 1)(2)(2)) // log出5
+console.log( +add(0, 1)(2)(2)) // log出5ls

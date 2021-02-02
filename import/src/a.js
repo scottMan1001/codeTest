@@ -1,5 +1,6 @@
-function sum (a,b){
-    return a+b
-}
-// var sum = 1;
-export default sum
+// function sum (a,b){
+//     return a+b
+// }
+var sum = {a:1,b:2}
+
+export  {sum}
