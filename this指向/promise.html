@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const pro = new Promise((resolve,reject)=>{
+            const innerpro = new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    resolve(1)
+                },0)
+                console.log(2)
+                resolve(3)
+            })
+            innerpro.then(res=>console.log("innerres=>",res))
+            resolve(4)
+            console.log("pro")
+        })
+        pro.then(res=>console.log("prores=>",res))
+        console.log("end")
+    </script>
+    
+</body>
+</html>
