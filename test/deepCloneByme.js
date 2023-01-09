@@ -1,10 +1,6 @@
 function deepClone(source, hash = new WeakMap()) {
   const _deepClone = (source) => {
-    if (
-      (typeof source !== "object" && typeof source !== "function") ||
-      source === null
-    )
-      return source;
+    if (typeof source !== "object" || source === null) return source;
 
     if (hash.has(source)) {
       return hash.get(source);
