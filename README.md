@@ -1,2 +1,5 @@
-# codeTest
-just code for code
+# GuideLine
+
+## Ts 文件
+
+npx ts-node filePath

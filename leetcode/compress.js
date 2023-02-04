@@ -1,4 +1,4 @@
-// return a2bc5a3
+// return a2b1c5a3
 const S = "aabcccccaaa";
 function compressFunc(S) {
   let str = "";
